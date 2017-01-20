@@ -1,0 +1,17 @@
+INSERT INTO ville VALUES(0,'Marquise');
+INSERT INTO ville VALUES(1,'Samer');
+INSERT INTO ville VALUES(2,'Guines');
+INSERT INTO ville VALUES(3,'Licques');
+INSERT INTO ville VALUES(4,'Sainr-Amand-les-Eaux');
+INSERT INTO ville VALUES(5,'Raismes');
+INSERT INTO ville VALUES(6,'Marchiennes');
+INSERT INTO ville VALUES(7,'Avesnes-sur-Helpe');
+INSERT INTO ville VALUES(8,'Le Quesnoy');
+INSERT INTO ville VALUES(9,'Croix');
+INSERT INTO ville VALUES(10,'Leers');
+INSERT INTO ville VALUES(11,'Marcq-en-Baroeul');
+INSERT INTO ville VALUES(12,'Roubaix');
+INSERT INTO ville VALUES(13,'Tourcoing');
+INSERT INTO ville VALUES(14,'Wasquehal');
+INSERT INTO ville VALUES(15,'Wattrelos');
+INSERT INTO ville VALUES(16,'Maroilles');

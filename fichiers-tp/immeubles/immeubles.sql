@@ -1,0 +1,97 @@
+
+CREATE TABLE ville (
+	"id_ville" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100)
+	);
+
+CREATE TABLE archi (
+	"id_archi" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100)
+	);
+
+CREATE TABLE porteur (
+	"id_porteur" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100)
+	);
+
+CREATE TABLE tt (
+	"id_tt" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100)
+	);
+
+CREATE TABLE entr (
+	"id_entr" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100),
+	"id_tt" INTEGER
+	);
+
+CREATE TABLE bat (
+	"id_bat" INTEGER NOT NULL PRIMARY KEY,
+	"nom" VARCHAR(100),
+	"id_porteur" INTEGER,
+	"id_ville" INTEGER,
+	"permis" VARCHAR(10)
+	);
+
+CREATE TABLE b2a (
+	"id_bat" INTEGER NOT NULL,
+	"id_archi" INTEGER NOT NULL,
+	PRIMARY KEY("id_bat","id_archi")
+	);
+
+CREATE TABLE b2e (
+	"id_bat" INTEGER NOT NULL,
+	"id_entr" INTEGER NOT NULL,
+	PRIMARY KEY("id_bat","id_entr")
+	);
+
+
+
+INSERT INTO ville VALUES(0, 'Lille');
+INSERT INTO ville VALUES(1, 'Douai');
+INSERT INTO ville VALUES(2, 'Arras');
+
+INSERT INTO archi VALUES(0, 'Cabinet Lorem');
+INSERT INTO archi VALUES(1, 'Cabinet Sic');
+INSERT INTO archi VALUES(2, 'Cabinet Ipsum');
+
+INSERT INTO porteur VALUES(0, 'M Dupont');
+INSERT INTO porteur VALUES(1, 'Mme Durand');
+INSERT INTO porteur VALUES(2, 'M Paul');
+
+INSERT INTO tt VALUES(0, 'electricite');
+INSERT INTO tt VALUES(1, 'gros-oeuvre');
+INSERT INTO tt VALUES(2, 'plomberie');
+
+INSERT INTO entr VALUES(0, 'SGEN', 0);
+INSERT INTO entr VALUES(1, 'SGO', 1);
+INSERT INTO entr VALUES(2, 'SPN', 2);
+INSERT INTO entr VALUES(3, 'DOUELEC', 0);
+INSERT INTO entr VALUES(4, 'PLOMBONOR', 2);
+INSERT INTO entr VALUES(5, 'GROUVRE', 1);
+INSERT INTO entr VALUES(6, 'SPMPLM', 2);
+
+INSERT INTO bat VALUES(0, 'Residence Camus', 0, 0, '45XV5');
+INSERT INTO bat VALUES(1, 'Residence Vinci', 1, 1, '23GC4');
+INSERT INTO bat VALUES(2, 'Residence Europe', 2, 0, '01SD6');
+INSERT INTO bat VALUES(3, 'Residence Soleil', 0, 2, '87PX9');
+
+INSERT INTO b2a VALUES(0, 0);
+INSERT INTO b2a VALUES(1, 1);
+INSERT INTO b2a VALUES(2, 2);
+INSERT INTO b2a VALUES(2, 0);
+INSERT INTO b2a VALUES(3, 1);
+
+INSERT INTO b2e VALUES(0, 0);
+INSERT INTO b2e VALUES(0, 1);
+INSERT INTO b2e VALUES(0, 2);
+INSERT INTO b2e VALUES(1, 3);
+INSERT INTO b2e VALUES(1, 1);
+INSERT INTO b2e VALUES(1, 4);
+INSERT INTO b2e VALUES(2, 3);
+INSERT INTO b2e VALUES(2, 5);
+INSERT INTO b2e VALUES(2, 6);
+INSERT INTO b2e VALUES(3, 0);
+INSERT INTO b2e VALUES(3, 1);
+INSERT INTO b2e VALUES(3, 4);
+
